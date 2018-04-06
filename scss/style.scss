@@ -1,0 +1,39 @@
+//===== base colors =====//
+$color-dark-green: #033c00;
+$color-gray: #7c7c7c;
+$color-beige: #f1efde;
+$color-dark-charcoal: #323232;
+$color-dark-sea-green: #97cf8a;
+$color-pigment: #059147;
+$color-carrot-orange: #fb911f;
+$color-light-slate-gray: #7b9a9c;
+$color-deep-ruby: #804950;
+$color-green-crayola: #0fb185;
+$color-green-cyan: #009966;
+$color-american-green: #22a942;
+$color-deep-green: #006c1a;
+$color-bright-gray: #ececec;
+$color-floral-white: #fffceb;
+
+header {
+  .top-bar {
+    min-height: 285px;
+    background-color: $color-dark-green;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: $color-dark-charcoal;
+}
