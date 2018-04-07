@@ -1,48 +1,5 @@
-//===== base colors =====//
-$color-dark-green: #033c00;
-$color-gray: #7c7c7c;
-$color-beige: #f1efde;
-$color-dark-charcoal: #323232;
-$color-dark-sea-green: #97cf8a;
-$color-pigment: #059147;
-$color-carrot-orange: #fb911f;
-$color-light-slate-gray: #7b9a9c;
-$color-deep-ruby: #804950;
-$color-green-crayola: #0fb185;
-$color-green-cyan: #009966;
-$color-american-green: #22a942;
-$color-deep-green: #006c1a;
-$color-bright-gray: #ececec;
-$color-floral-white: #fffceb;
-$color-title: #585858;
-$color-button-text: #003307;
-$color-dropdown-bg: #ebebeb;
-
-$font-geosans: "GeosansLight";
-//===== base font size =====//
-$fontsize-h1:										48px;
-$fontsize-h2:										36px;
-$fontsize-h3:										28px;
-$fontsize-h4:										24px;
-$fontsize-h5:										22px;
-$fontsize-h6:										18px;
-$fontsize-default: 16px;
-$fontsize-small: 14px;
-
-//===== default vertical gap =====//
-$base-gap-huge: 								80px;
-$base-gap-extra: 								60px;
-$base-gap-large: 								45px;
-$base-gap: 											30px;
-$base-gap-small: 								15px;
-$base-gap-tiny: 								10px;
-
-@font-face {
-  font-family: 'GeosansLight';
-  src: url(../fonts/GeosansLight.ttf);
-  font-weight: 600;
-  font-style: normal;
-}
+//===== Variables =====//
+@import "variables.scss";
 
 header {
   .top-bar {
@@ -64,8 +21,6 @@ header {
       line-height: 0;
       border-color: $color-gray;
       .navbar-nav {
-        display: inline-block;
-        float: none;
         .dropdown-menu {
           &>li>a {
             font-family: $font-geosans;
@@ -76,7 +31,7 @@ header {
           }
         }
         &>.open>a {
-          background-color: transparent;
+          background-color: $color-dropdown-bg;
         }
         &>li {
           font-family: 'Arial';
@@ -85,6 +40,10 @@ header {
           &>a {
             padding: 20px 15px;
             color: #fff;
+            &:hover {
+              background-color: $color-dropdown-bg;
+              color: #333;
+            }
           }
         }
       }
@@ -121,7 +80,7 @@ body {
 }
 
 footer {
-  padding: $base-gap-huge 0;
+  padding: $base-gap-huge-xs 0;
   font-family: 'Arial';
   background-color: $color-dark-charcoal;
   color: #fff;
@@ -130,6 +89,9 @@ footer {
     padding: 40px 20px;
     h6 {
       margin-top: 0;
+    }
+    .footer-quick-link {
+      text-align: center;
     }
   }
 
@@ -152,15 +114,19 @@ footer {
   }
   .footer-link {
     display: block;
+    font-size: $fontsize-small;
+    text-align: center;
     text-decoration: none;
     color: #fff;
   }
   .footer-contact-info {
+    text-align: center;
     font-size: $fontsize-h6;
     line-height: 1.28;
   }
   .footer-contact-address,
   .footer-contact-phone {
+    text-align: center;
     line-height: 1.64;
   }
 }
@@ -171,28 +137,28 @@ img {
 }
 
 h1 {
-  font-size: $fontsize-h1;
+  font-size: $fontsize-h1-xs;
 }
 h2 {
-  font-size: $fontsize-h2;
+  font-size: $fontsize-h2-xs;
 }
 h3 {
-  font-size: $fontsize-h3;
+  font-size: $fontsize-h3-xs;
 }
 h4 {
-  font-size: $fontsize-h4;
+  font-size: $fontsize-h4-xs;
 }
 h5 {
-  font-size: $fontsize-h5;
+  font-size: $fontsize-h4-xs;
 }
 h6 {
-  font-size: $fontsize-h6;
+  font-size: $fontsize-default-xs;
 }
 
 .btn {
-  font-size: $fontsize-h2;
+  font-size: $fontsize-h2-xs;
   &.btn-sm {
-    font-size: $fontsize-h3;
+    font-size: $fontsize-h3-xs;
   }
   &.btn-round {
     border-radius: 35px;
@@ -295,26 +261,26 @@ h6 {
 
 .our-services {
   display: inline-block;
-  margin: 30px 0;
+  margin: $base-gap-small 0;
   max-width: 1035px;
   text-align: center;
   color: #000;
   h4 {
-    line-height: 1.8;
+    line-height: $line-height-sm;
   }
 }
 
 .service-block {
-  min-height: 422px;
-  padding: 45px;
-  margin-bottom: $base-gap-huge;
+  min-height: 355px;
+  padding: $base-gap-large-xs;
+  margin-bottom: $base-gap-huge-xs;
   border-radius: 35px;
   color: #fff;
   .block-title {
-    font-size: $fontsize-h1;
+    font-size: $fontsize-h3;
   }
   h4 {
-    line-height: 1.8;
+    line-height: 1.4;
     span {
       display: inline-block;
       max-width: 950px;
@@ -332,7 +298,7 @@ h6 {
 }
 
 .how-it-works {
-  margin: 70px 0;
+  margin: $base-gap-huge-xs 0;
   text-align: center;
   h4 {
     line-height: 1.5;
@@ -355,28 +321,28 @@ h6 {
 }
 
 .boxed-content {
-  padding: 80px;
+  padding: $base-gap-huge-xs;
   text-align: center;
   color: #ffffff;
 
   .boxed-number {
-    margin-bottom: 35px;
+    margin-bottom: $base-gap-xs;
     font-family: 'Arial';
-    font-size: 60px;
+    font-size: $fontsize-xl-xs;
     font-weight: 900;
     line-height: 0.62;
   }
   .boxed-title {
-    margin-bottom: 45px;
-    font-size: 48px;
+    margin-bottom: $base-gap-large-xs;
+    font-size: $fontsize-h1-xs;
   }
   .boxed-description {
-    margin-bottom: 75px;
-    font-size: 18px;
+    margin-bottom: $base-gap-huge-xs;
+    font-size: $fontsize-h6-xs;
     line-height: 1.33;
   }
   .boxed-price {
-    font-size: 36px;
+    font-size: $fontsize-h2-xs;
     line-height: 1.03;
   }
 }
@@ -394,14 +360,14 @@ h6 {
   text-align: center;
   .process-title {
     margin-bottom: 0;
-    font-size: $fontsize-h1;
+    font-size: $fontsize-h1-xs;
   }
 }
 .step-by-step-detail {
   padding: 40px 20px;
   background-color: $color-floral-white;
   .step-title {
-    font-size: $fontsize-h3;
+    font-size: $fontsize-h3-xs;
   }
   .step-detail {
     margin-bottom: 20px;
@@ -411,17 +377,17 @@ h6 {
 }
 
 .big-title {
-  font-size: $fontsize-h1;
+  font-size: $fontsize-h1-xs;
 }
 
 .start-plan {
   height: 100%;
-  margin-bottom: 30px;
-  padding: 50px;
+  margin-bottom: $base-gap-xs;
+  padding: $base-gap-large-xs;
   color: #fff;
 
   h2 {
-    margin-bottom: 100px;
+    margin-bottom: $base-gap-huge-xs + 20;
   }
 }
 
@@ -431,23 +397,105 @@ h6 {
   }
 }
 @media screen and (min-width: 768px) {
-  header .top-bar .top-bar-logo img {
-    height: 120px;
+  header {
+    .top-bar .top-bar-logo img {
+      height: 120px;
+    }
+    .navbar-default {
+      .navbar-collapse {
+        .navbar-nav {
+          display: inline-block;
+          float: none;
+          &>li {
+            font-size: 10px;
+            &>a {
+              padding: 15px;
+            }
+          }
+          .dropdown-menu>li>a {
+            font-size: 16px;
+            text-align: left;
+            color: #000;
+            &:hover {
+              background-color: $color-dark-green;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
   }
-  header .navbar-default .navbar-collapse .navbar-nav>li {
-    font-size: 10px;
-  }
-  header .navbar-default .navbar-collapse .navbar-nav>li>a {
-    padding: 15px;
-  }
-  header .navbar-default .navbar-collapse .navbar-nav .dropdown-menu>li>a {
-    font-size: 16px;
-    text-align: left;
-    color: #000;
+  footer {
+    padding: $base-gap-huge-md 0;
+
+    .footer-col .footer-quick-link,
+    .footer-link,
+    .footer-contact-info,
+    .footer-contact-address,
+    .footer-contact-phone {
+      text-align: left;
+    }
   }
   .navbar-nav .open .dropdown-menu {
     background-color: $color-dropdown-bg;
     box-shadow: none;
+  }
+  h1 {
+    font-size: $fontsize-h1-md;
+  }
+  h2 {
+    font-size: $fontsize-h2-md;
+  }
+  h3 {
+    font-size: $fontsize-h3-md;
+  }
+  .btn {
+    font-size: $fontsize-h2-md;
+    &.btn-sm {
+      font-size: $fontsize-h3-md;
+    }
+  }
+  .our-services {    
+    h4 {
+      line-height: $line-height-lg;
+    }
+  }
+  .how-it-works {
+    margin: $base-gap-huge-md 0;
+  }
+  .boxed-content {
+    padding: $base-gap-huge-md;
+
+    .boxed-number {
+      margin-bottom: $base-gap-md;
+      font-size: $fontsize-xl-md;
+    }
+    .boxed-title {
+      margin-bottom: $base-gap-large-md;
+      font-size: $fontsize-h1-md;
+    }
+    .boxed-description {
+      margin-bottom: $base-gap-huge-md;
+    }
+    .boxed-price {
+      font-size: $fontsize-h2-md;
+    }
+  }
+  .step-by-step-process .process-title {
+    font-size: $fontsize-h1-md;
+  }
+  .step-by-step-detail .step-title {
+    font-size: $fontsize-h3-md;
+  }
+  .big-title {
+    font-size: $fontsize-h1-md;
+  }
+  .start-plan {
+    margin-bottom: $base-gap-md;
+    padding: $base-gap-large-md;
+    h2 {
+      margin-bottom: $base-gap-huge-md + 20;
+    }
   }
 }
 @media screen and (min-width: 992px) {
@@ -471,10 +519,93 @@ h6 {
   header .top-bar .top-bar-logo img {
     height: auto;
   }
+  footer {
+    padding: $base-gap-huge 0;
+  }
 	.page-container {
 		width: 1290px;
   }
   .container-sm {
     width: 860px;
+  }
+  h1 {
+    font-size: $fontsize-h1;
+  }
+  h2 {
+    font-size: $fontsize-h2;
+  }
+  h3 {
+    font-size: $fontsize-h3;
+  }
+  h4 {
+    font-size: $fontsize-h4;
+  }
+  h5 {
+    font-size: $fontsize-h5;
+  }
+  h6 {
+    font-size: $fontsize-h6;
+  }
+  .btn {
+    font-size: $fontsize-h2;
+    &.btn-sm {
+      font-size: $fontsize-h3;
+    }
+  }
+  .our-services {
+    margin: $base-gap 0;
+    h4 {
+      line-height: $line-height-lg;
+    }
+  }
+  .service-block {
+    min-height: 422px;
+    padding: $base-gap-large;
+    margin-bottom: $base-gap-huge;
+    border-radius: 35px;
+    .block-title {
+      font-size: $fontsize-h1;
+    }
+    h4 {
+      line-height: 1.8;
+    }
+  }
+  .how-it-works {
+    margin: $base-gap-huge 0;
+  }
+  .boxed-content {
+    padding: $base-gap-huge;
+
+    .boxed-number {
+      margin-bottom: $base-gap;
+      font-size: $fontsize-xl;
+    }
+    .boxed-title {
+      margin-bottom: $base-gap-large;
+      font-size: $fontsize-h1;
+    }
+    .boxed-description {
+      margin-bottom: $base-gap-huge;
+      font-size: $fontsize-h6;
+    }
+    .boxed-price {
+      font-size: $fontsize-h2;
+    }
+  }
+  .step-by-step-process .process-title {
+    font-size: $fontsize-h1;
+  }
+  .step-by-step-detail .step-title {
+    font-size: $fontsize-h3;
+  }
+  .big-title {
+    font-size: $fontsize-h1;
+  }
+  .start-plan {
+    margin-bottom: $base-gap;
+    padding: $base-gap-large;
+    h2 {
+      margin-bottom: $base-gap-huge + 20;
+    }
   }
 }

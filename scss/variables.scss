@@ -1,0 +1,78 @@
+//===== base colors =====//
+$color-dark-green: #033c00;
+$color-gray: #7c7c7c;
+$color-beige: #f1efde;
+$color-dark-charcoal: #323232;
+$color-dark-sea-green: #97cf8a;
+$color-pigment: #059147;
+$color-carrot-orange: #fb911f;
+$color-light-slate-gray: #7b9a9c;
+$color-deep-ruby: #804950;
+$color-green-crayola: #0fb185;
+$color-green-cyan: #009966;
+$color-american-green: #22a942;
+$color-deep-green: #006c1a;
+$color-bright-gray: #ececec;
+$color-floral-white: #fffceb;
+$color-title: #585858;
+$color-button-text: #003307;
+$color-dropdown-bg: #ebebeb;
+
+$font-geosans: "GeosansLight";
+
+//===== base font size =====//
+$fontsize-xl:										60px;
+$fontsize-h1:										48px;
+$fontsize-h2:										36px;
+$fontsize-h3:										28px;
+$fontsize-h4:										24px;
+$fontsize-h5:										22px;
+$fontsize-h6:										18px;
+$fontsize-default:              16px;
+$fontsize-small:                14px;
+$fontsize-xs:                   12px;
+
+$fontsize-xl-md:							  $fontsize-h1 + 4;
+$fontsize-h1-md:							  $fontsize-h2 + 4;
+$fontsize-h2-md:								$fontsize-h3 + 2;
+$fontsize-h3-md:								$fontsize-h4 + 2;
+
+$fontsize-xl-xs:							  $fontsize-h1;
+$fontsize-h1-xs:							  $fontsize-h2;
+$fontsize-h2-xs:								$fontsize-h3;
+$fontsize-h3-xs:								$fontsize-h4;
+$fontsize-h4-xs:								$fontsize-h5;
+$fontsize-h5-xs:								$fontsize-h6;
+$fontsize-h6-xs:								$fontsize-default;
+$fontsize-default-xs:           $fontsize-small;
+$fontsize-small-xs:             $fontsize-xs;
+
+
+//===== line height =====//
+$line-height-lg:                1.8;
+$line-height-md:                1.6;
+$line-height-sm:                1.4;
+$line-height-tn:                1.2;
+$line-height-xs:                1;
+
+//===== default vertical gap =====//
+$base-gap-huge: 								80px;
+$base-gap-extra: 								60px;
+$base-gap-large: 								45px;
+$base-gap: 											30px;
+$base-gap-small: 								15px;
+$base-gap-tiny: 								10px;
+
+$base-gap-huge-md: 							$base-gap-extra;
+$base-gap-huge-xs: 							$base-gap-large;
+$base-gap-large-md: 						$base-gap + 5;
+$base-gap-large-xs: 						$base-gap;
+$base-gap-md:                   $base-gap-small + 5;
+$base-gap-xs:                   $base-gap-small;
+
+@font-face {
+  font-family: 'GeosansLight';
+  src: url(../fonts/GeosansLight.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
