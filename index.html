@@ -10,19 +10,163 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
   
 	<body>
 		
 		<header>
-			<div class="top-bar"></div>
+			<div class="top-bar">
+				<a class="top-bar-logo" href="#">
+					<img src="images/logo.png" alt="Logo">
+				</a>
+			</div>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get Started<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Our Services</a>
+						</li>
+						<li>
+							<a href="#">How It Works</a>
+						</li>
+						<li>
+							<a href="#">Stories</a>
+						</li>
+						<li>
+							<a href="#">Donate</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Sign In</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</header>
-		<footer></footer>
+
+		<div class="slider">
+			<img src="images/slide01.jpg" alt="Slider">
+		</div>
+
+		<div class="welcom-to-mytaproot text-center">
+			<h1 class="top-gap-huge">Welcome To MyTapRoot</h1>
+			<h4 class="bottom-gap-huge">Providing a safe and secure place for those who want to discover their birth roots in China.</h4>
+			<p class="bottom-gap-huge"><a class="btn btn-round btn-green">Learn More</a></p>
+		</div>
+
+		<div class="bg-gray color-white">
+			<div class="container text-center">
+				<h2 class="top-gap-huge">Start Your Journey</h2>
+				<p class="text-left bottom-gap">No matter your role in the adoptive story, you've come to the right place. Rest assured that there are thousands of others
+				out there just like you on the same adventure of discovery. MyTaproot is your space - specifically designed to be a groundbreaking
+				community for those who want answers in the journey to discover their roots.</p>
+				<p class="text-left bottom-gap">MyTapRoot represents the collective efforts of many people within the International Chinese adoption community, and was built
+				through the philanthropic efforts, support, and vision of Chinese Children Adoption International (CCAI), the largest China
+				adoption agency in the world. Having facilitated over 12,000 adoptions since 1992, CCAI has always been committed to the
+				long-term well being of adoptees and keenly attentive to the evolving and complex needs of the adoption community.</p>
+				<p class="text-left bottom-gap-huge">As interest in birth family searches grows, CCAI is eager to venture into this challenging new area with the hope of providing
+				an approach that supports the emotional sensitivity and logistical complexities of such a journey, while revolutionizing
+				the birth search experience.</p>
+			</div>
+		</div>
+
+		<div class="bg-beige">
+			<div class="container text-center">
+				<h2 class="top-gap-huge">MapRoot - A Visual Guide to Your Community</h2>
+				<p class="bottom-gap-huge">MapRoot provides a visualization of adoptees and birth families currently searching for their roots. Members have the opportunity
+				to place a pin on their finding location and are able to share information about their personal stories. Each pin represents
+				a search and a story.</p>
+			</div>
+		</div>
+
+		<div id="gmap"></div>
+
+		<div class="bg-dark-green color-white">
+			<div class="container text-center">
+				<p class="top-gap"><img src="images/heart.png" alt="Heart"></p>
+				<h2>Give Today</h2>
+				<h4 class="bottom-gap">Your gift can help bring adoptees one step closer to discovering their birth roots</h4>
+				<p class="bottom-gap-huge">
+					<a class="btn btn-sm btn-round btn-white">Donate Today</a>
+				</p>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 footer-col">
+						<a class="footer-link" href="#">Home</a>
+						<a class="footer-link" href="#">About</a>
+						<a class="footer-link" href="#">Stories</a>
+						<a class="footer-link" href="#">FAQ</a>
+						<a class="footer-link" href="#">Donate</a>
+						<a class="footer-link" href="#">Hot It Works</a>
+						<a class="footer-link" href="#">Contact Us</a>
+					</div>
+					<div class="col-md-4 footer-col text-center">
+						<h6>SOCIAL</h6>
+						<div class="social-links">
+							<a class="social-link" href="#">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+							</a>
+							<a class="social-link" href="#">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
+							<a class="social-link" href="#">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 footer-col">
+						<p class="footer-contact-info">MyTapRoot Contact Information</p>
+						<p class="footer-contact-address">Address: 6920 South Holly Circle, Centennial, Colorado, USA 80112</p>
+						<p class="footer-contact-phone">Phone: 303-850-9998</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<!-- JavaScript -->
 		<script type="text/javascript" src="vendor/jquery.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
     
 	</body>
 </html>

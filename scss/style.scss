@@ -15,10 +15,69 @@ $color-deep-green: #006c1a;
 $color-bright-gray: #ececec;
 $color-floral-white: #fffceb;
 
+$font-geosans: "GeosansLight";
+//===== base font size =====//
+$fontsize-h1:										48px;
+$fontsize-h2:										36px;
+$fontsize-h3:										28px;
+$fontsize-h4:										24px;
+$fontsize-h5:										22px;
+$fontsize-h6:										18px;
+$fontsize-default: 16px;
+$fontsize-small: 14px;
+
+//===== default vertical gap =====//
+$base-gap-huge: 								80px;
+$base-gap-extra: 								60px;
+$base-gap-large: 								45px;
+$base-gap: 											30px;
+$base-gap-small: 								15px;
+$base-gap-tiny: 								10px;
+
+@font-face {
+  font-family: 'GeosansLight';
+  src: url(../fonts/GeosansLight.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
 header {
   .top-bar {
-    min-height: 285px;
+    padding: 25px;
+    text-align: center;
     background-color: $color-dark-green;
+  }
+  .navbar-default {
+    margin-bottom: 0;
+    background-color: $color-gray;
+    border-color: $color-gray;
+    border-radius: 0;
+    .navbar-collapse {
+      position: relative;
+      text-align: center;
+      line-height: 0;
+      .navbar-nav {
+        display: inline-block;
+        float: none;
+        .dropdown-menu>li>a {
+          font-family: $font-geosans;
+          font-size: $fontsize-h4;
+          text-transform: capitalize;
+        }
+        &>.open>a {
+          background-color: transparent;
+        }
+        &>li {
+          font-family: 'Arial';
+          font-size: 16px;
+          text-transform: uppercase;
+          &>a {
+            padding: 20px 15px;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -26,8 +85,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: "Raleway", sans-serif;
-  font-size: 24px;
+  font-family: $font-geosans;
+  font-size: $fontsize-default;
   line-height: 1.2;
   letter-spacing: 0;
   background-color: #ffffff;
@@ -35,5 +94,130 @@ body {
 }
 
 footer {
+  padding: $base-gap-huge 0;
+  font-family: 'Arial';
   background-color: $color-dark-charcoal;
+  color: #fff;
+
+  .footer-col {
+    padding: 40px 20px;
+    h6 {
+      margin-top: 0;
+    }
+  }
+
+  .social-links {
+    .social-link {
+      display: inline-block;
+      margin: 4px 2px;
+      padding: 6px;
+      background-color: #949494;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: $fontsize-h4;
+      i {
+        width: 28px;
+        height: 25px;
+      }
+    }
+  }
+  .footer-link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-contact-info {
+    font-size: $fontsize-h6;
+    line-height: 1.28;
+  }
+  .footer-contact-address,
+  .footer-contact-phone {
+    line-height: 1.64;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: $fontsize-h1;
+}
+h2 {
+  font-size: $fontsize-h2;
+}
+h3 {
+  font-size: $fontsize-h3;
+}
+h4 {
+  font-size: $fontsize-h4;
+}
+h5 {
+  font-size: $fontsize-h5;
+}
+h6 {
+  font-size: $fontsize-h6;
+}
+
+.btn {
+  padding: 0 50px;
+  font-size: $fontsize-h2;
+  &.btn-sm {
+    font-size: $fontsize-h3;
+  }
+  &.btn-round {
+    border-radius: 35px;
+  }
+  &.btn-green {
+    background-color: $color-deep-green;
+    color: #fff;
+    &:hover {
+      background-color: $color-pigment;
+    }
+  }
+  &.btn-white {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.bg-gray {
+  background-color: $color-gray;
+}
+.bg-beige {
+  background-color: $color-beige;
+}
+.bg-dark-green {
+  background-color: $color-dark-green;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.top-gap-huge {
+  margin-top: $base-gap-huge;
+}
+.bottom-gap-huge {
+  margin-bottom: $base-gap-huge;
+}
+.top-gap {
+  margin-top: $base-gap;
+}
+.bottom-gap {
+  margin-bottom: $base-gap;
+}
+
+.slider {
+  img {
+    width: 100%;
+  }
+}
+
+#gmap {
+  width: 100%;
+  height: 675px;
 }
