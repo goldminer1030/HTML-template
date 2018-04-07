@@ -15,6 +15,7 @@ header {
     background-color: $color-gray;
     border-color: $color-gray;
     border-radius: 0;
+    border-width: 0;
     .navbar-collapse {
       position: relative;
       text-align: center;
@@ -37,6 +38,18 @@ header {
           font-family: 'Arial';
           font-size: 16px;
           text-transform: uppercase;
+          &.active {
+            &>a {
+              background-color: $color-dark-green;
+              color: #fff;
+            }
+            &:hover {
+              &>a {
+                background-color: $color-dark-green;
+                color: #fff;
+              }
+            }
+          }
           &>a {
             padding: 20px 15px;
             color: #fff;
@@ -321,6 +334,7 @@ h6 {
 }
 
 .boxed-content {
+  position: relative;
   padding: $base-gap-huge-xs;
   text-align: center;
   color: #ffffff;
@@ -342,6 +356,11 @@ h6 {
     line-height: 1.33;
   }
   .boxed-price {
+    position: absolute;
+    bottom: $base-gap-huge-xs;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
     font-size: $fontsize-h2-xs;
     line-height: 1.03;
   }
@@ -408,6 +427,15 @@ h6 {
           float: none;
           &>li {
             font-size: 10px;
+            &.active {
+              border-color: $color-dark-green;
+              &>a {
+                background-color: $color-dark-green;
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
             &>a {
               padding: 15px;
             }
@@ -439,6 +467,8 @@ h6 {
   .navbar-nav .open .dropdown-menu {
     background-color: $color-dropdown-bg;
     box-shadow: none;
+    padding: 0;
+    border-radius: 0;
   }
   h1 {
     font-size: $fontsize-h1-md;
@@ -478,6 +508,7 @@ h6 {
       margin-bottom: $base-gap-huge-md;
     }
     .boxed-price {
+      bottom: $base-gap-huge-md;
       font-size: $fontsize-h2-md;
     }
   }
@@ -589,6 +620,7 @@ h6 {
       font-size: $fontsize-h6;
     }
     .boxed-price {
+      bottom: $base-gap-huge;
       font-size: $fontsize-h2;
     }
   }
