@@ -163,7 +163,7 @@ h6 {
 }
 
 .btn {
-  padding: 0 50px;
+  min-width: 290px;
   font-size: $fontsize-h2;
   &.btn-sm {
     font-size: $fontsize-h3;
@@ -193,6 +193,21 @@ h6 {
 .bg-dark-green {
   background-color: $color-dark-green;
 }
+.bg-dark-sea-green {
+  background-color: $color-dark-sea-green;
+}
+.bg-pigment {
+  background-color: $color-pigment;
+}
+.bg-carrot-orange {
+  background-color: $color-carrot-orange;
+}
+.bg-light-slate-gray {
+  background-color: $color-light-slate-gray;
+}
+.bg-deep-ruby {
+  background-color: $color-deep-ruby;
+}
 
 .color-white {
   color: #fff;
@@ -220,4 +235,47 @@ h6 {
 #gmap {
   width: 100%;
   height: 675px;
+}
+
+.our-services {
+  display: inline-block;
+  margin: 30px 0;
+  max-width: 1035px;
+  text-align: center;
+  h4 {
+    line-height: 1.8;
+  }
+}
+
+.service-block {
+  min-height: 422px;
+  padding: 45px;
+  margin-bottom: $base-gap-huge;
+  border-radius: 35px;
+  color: #fff;
+  .block-title {
+    font-size: $fontsize-h1;
+  }
+  h4 {
+    line-height: 1.8;
+    span {
+      display: inline-block;
+      max-width: 950px;
+      &.description-lg {
+        max-width: 1108px;
+      }
+      &.description-md {
+        max-width: 980px;
+      }
+      &.description-sm {
+        max-width: 940px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1316px) {
+	.page-container {
+		width: 1290px;
+	}
 }
